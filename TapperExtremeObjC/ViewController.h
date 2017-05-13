@@ -8,8 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
+@interface ViewController : UIViewController <UITextFieldDelegate>
 
+@property (nonatomic) int maxTaps;
+@property (nonatomic) int currentTaps;
 
 @end
 
