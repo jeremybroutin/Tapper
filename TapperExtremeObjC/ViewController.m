@@ -20,14 +20,14 @@
 
 @implementation ViewController
 
-# pragma mark - UIViewController
+#pragma mark - UIViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     _howManyTapsTxt.delegate = self;
 }
 
-# pragma mark - IBActions
+#pragma mark - IBActions
 
 - (IBAction)onCoinTapped:(id)sender {
     _currentTaps++;
@@ -69,6 +69,13 @@
     
     [_tapBtn setHidden:!value];
     [_tapsLbl setHidden:!value];
+}
+
+#pragma mark - UITextFieldDelegate
+
+- (BOOL)textFieldShouldReturn:(UITextField *)textField {
+    [textField resignFirstResponder];
+    return YES;
 }
 
 
